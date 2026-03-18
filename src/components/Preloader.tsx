@@ -13,27 +13,34 @@ export default function Preloader() {
     const timer = setTimeout(() => {
       window.sessionStorage.setItem('btronic_preloader_seen', '1');
       setLoading(false);
-    }, 800);
+    }, 450);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [loading]);
 
   if (!loading) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900">
-      <div className="text-center">
-        <div className="mb-8 flex justify-center">
-          <div className="relative h-32 w-56 bg-black rounded-lg flex items-center justify-center shadow-2xl">
-            <img
-              src="/btronic-logo.png"
-              alt="B-TRONIC AUTO"
-              className="h-24 w-auto object-contain"
-            />
+      <div className="text-center px-6">
+        <div className="mb-7 flex justify-center">
+          <div className="relative h-16 w-16">
+            <div className="absolute inset-0 rounded-full border-4 border-gray-700" />
+            <div className="absolute inset-0 rounded-full border-4 border-red-600 border-t-transparent animate-spin" />
+            <div className="absolute inset-3 rounded-full bg-gray-800 shadow-inner" />
           </div>
         </div>
-        <p className="text-white text-lg font-semibold tracking-wider">Chargement...</p>
-        <p className="text-gray-400 text-sm mt-2">B-TRONIC AUTO</p>
+
+        <div className="mx-auto max-w-sm">
+          <p className="text-white text-lg font-semibold tracking-wide">Chargement…</p>
+          <p className="text-gray-400 text-sm mt-2">
+            Service rapide • Qualité • Transparence
+          </p>
+
+          <div className="mt-5 h-1.5 w-64 max-w-full mx-auto rounded-full bg-gray-800 overflow-hidden">
+            <div className="h-full w-1/2 bg-red-600 rounded-full animate-pulse" />
+          </div>
+        </div>
       </div>
     </div>
   );

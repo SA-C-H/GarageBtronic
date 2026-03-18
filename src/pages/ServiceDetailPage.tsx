@@ -31,11 +31,7 @@ export default function ServiceDetailPage() {
 
   const Icon = service.icon;
   const related = services.filter(s => s.slug !== service.slug).slice(0, 4);
-  const serviceGallery = [
-    'https://images.pexels.com/photos/4488667/pexels-photo-4488667.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/13065690/pexels-photo-13065690.jpeg?auto=compress&cs=tinysrgb&w=800'
-  ];
+  const serviceGallery = service.images ?? [];
 
   return (
     <main className="min-h-screen bg-white pt-20">
@@ -92,6 +88,7 @@ export default function ServiceDetailPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               {/* Carrousel photos du service */}
+              {serviceGallery.length > 0 && (
               <div className="mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                   Quelques vues de ce service
@@ -110,6 +107,7 @@ export default function ServiceDetailPage() {
                   </div>
                 </div>
               </div>
+              )}
 
               <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Ce qui est inclus</h2>

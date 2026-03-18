@@ -32,6 +32,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Preloader />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />

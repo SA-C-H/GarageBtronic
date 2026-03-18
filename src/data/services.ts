@@ -18,6 +18,7 @@ export type Service = {
   icon: ComponentType<LucideProps>;
   heroTagline: string;
   longDescription: string;
+  images: string[];
   included: string[];
   idealFor: string[];
   process: { title: string; description: string }[];
@@ -33,6 +34,11 @@ export const services: Service[] = [
     heroTagline: 'Trouver la cause, vite et bien',
     longDescription:
       "Nous effectuons un diagnostic précis (électronique et mécanique) pour détecter l'origine d'une panne, réduire les essais inutiles et vous proposer une solution claire avec un devis transparent.",
+    images: [
+      '/images/services/diagnostic-automobile/1.png',
+      '/images/services/diagnostic-automobile/2.png',
+      '/images/services/diagnostic-automobile/3.webp'
+    ],
     included: [
       'Lecture et interprétation des défauts (OBD)',
       'Contrôle visuel et tests ciblés',
@@ -61,6 +67,11 @@ export const services: Service[] = [
     heroTagline: 'Performance, fiabilité, tranquillité',
     longDescription:
       "Du simple remplacement de pièces à la révision, nous intervenons avec méthode pour restaurer les performances et la fiabilité de votre moteur, en privilégiant des pièces adaptées et des réglages soignés.",
+    images: [
+      '/images/services/reparation-moteur/1.webp',
+      '/images/services/reparation-moteur/2.webp',
+      '/images/services/reparation-moteur/3.webp'
+    ],
     included: [
       'Contrôle compression / fuites (selon besoin)',
       'Remplacement pièces d’usure (courroies, joints, etc.)',
@@ -89,6 +100,7 @@ export const services: Service[] = [
     heroTagline: 'Un moteur bien lubrifié dure plus longtemps',
     longDescription:
       "La vidange régulière protège le moteur contre l'usure prématurée. Nous utilisons des huiles adaptées et respectons les recommandations constructeur pour garantir une lubrification optimale.",
+    images: ['/images/services/vidange/2.jpg', '/images/services/vidange/3.webp'],
     included: [
       'Vidange huile moteur',
       'Remplacement filtre à huile',
@@ -115,6 +127,10 @@ export const services: Service[] = [
     heroTagline: 'Adhérence et sécurité au quotidien',
     longDescription:
       "Des pneus en bon état réduisent la distance de freinage et améliorent la tenue de route. Nous vous aidons à choisir la bonne dimension et le bon type selon votre usage.",
+    images: [
+      '/images/services/changement-de-pneus/1.png',
+      '/images/services/changement-de-pneus/2.jpg'
+    ],
     included: [
       'Montage / démontage',
       'Équilibrage des roues',
@@ -142,6 +158,7 @@ export const services: Service[] = [
     heroTagline: 'Un résultat propre, une finition soignée',
     longDescription:
       "Chocs, rayures, bosses ou peinture ternie : nous remettons en état votre carrosserie avec des étapes de préparation rigoureuses pour un rendu durable et harmonieux.",
+    images: ['/images/services/carrosserie/1.webp', '/images/services/carrosserie/2.jpg', '/images/services/carrosserie/3.webp'],
     included: [
       'Débosselage et redressage (selon cas)',
       'Préparation (ponçage, mastic, apprêt)',
@@ -170,6 +187,7 @@ export const services: Service[] = [
     heroTagline: 'On vous aide, rapidement',
     longDescription:
       "En cas de panne, nous vous guidons et intervenons selon la situation. Notre objectif : vous remettre en route en sécurité ou organiser la solution la plus adaptée.",
+    images: [],
     included: [
       'Assistance téléphonique',
       'Évaluation rapide de la panne',
@@ -197,6 +215,7 @@ export const services: Service[] = [
     heroTagline: 'Les bonnes pièces, au bon prix',
     longDescription:
       "Nous proposons des pièces adaptées à votre véhicule et à votre budget, avec des conseils pour éviter les incompatibilités et préserver la fiabilité.",
+    images: [],
     included: [
       'Conseil et compatibilité',
       'Pièces neuves selon disponibilité',
@@ -224,6 +243,11 @@ export const services: Service[] = [
     heroTagline: 'Prévenir coûte moins cher que réparer',
     longDescription:
       "Un entretien planifié augmente la durée de vie du véhicule et réduit les pannes. Nous vous aidons à suivre les échéances (huile, filtres, freins, refroidissement, etc.).",
+    images: [
+      '/images/services/entretien-automobile/1.jpeg',
+      '/images/services/entretien-automobile/2.webp',
+      '/images/services/entretien-automobile/3.jpg'
+    ],
     included: [
       'Contrôle général de sécurité',
       'Contrôle freins / suspension (selon besoin)',

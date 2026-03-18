@@ -1,18 +1,16 @@
-import { Car, Truck, Bus } from 'lucide-react';
-
 const vehicleTypes = [
   {
-    icon: Car,
+    image: '/images/vehicles/voitures.jpg',
     title: 'Voitures',
     description: 'Réparation et entretien de tous types de voitures particulières, berlines, SUV et 4x4.'
   },
   {
-    icon: Truck,
+    image: '/images/vehicles/camions.jpg',
     title: 'Camions',
     description: 'Maintenance et réparation de camions légers et lourds pour le transport de marchandises.'
   },
   {
-    icon: Bus,
+    image: '/images/vehicles/utilitaires.jpg',
     title: 'Véhicules utilitaires',
     description: 'Service complet pour fourgons, camionnettes et autres véhicules professionnels.'
   }
@@ -35,21 +33,23 @@ export default function VehicleTypes() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {vehicleTypes.map((vehicle, index) => {
-            const Icon = vehicle.icon;
-            return (
-              <div
-                key={index}
-                className="bg-gray-800 rounded-xl p-8 border border-gray-700 hover:border-red-600 transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="bg-red-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6 mx-auto">
-                  <Icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-4">{vehicle.title}</h3>
-                <p className="text-gray-400 text-center leading-relaxed">{vehicle.description}</p>
+          {vehicleTypes.map((vehicle, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-red-600 transition-all duration-300 transform hover:-translate-y-2"
+            >
+              <div className="mb-6 rounded-lg overflow-hidden relative h-40">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
+                <img
+                  src={vehicle.image}
+                  alt={vehicle.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            );
-          })}
+              <h3 className="text-2xl font-bold text-center mb-4">{vehicle.title}</h3>
+              <p className="text-gray-400 text-center leading-relaxed">{vehicle.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
